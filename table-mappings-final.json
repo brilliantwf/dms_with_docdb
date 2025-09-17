@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "rule-type": "selection",
+      "rule-id": "1",
+      "rule-name": "select-players-table",
+      "object-locator": {
+        "schema-name": "gamedb",
+        "table-name": "players-S1toS5"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "selection", 
+      "rule-id": "2",
+      "rule-name": "select-equipments-table",
+      "object-locator": {
+        "schema-name": "gamedb",
+        "table-name": "equipments-S1toS5"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "3", 
+      "rule-name": "rename-players-table",
+      "rule-target": "table",
+      "object-locator": {
+        "schema-name": "gamedb",
+        "table-name": "players-S1toS5"
+      },
+      "rule-action": "rename",
+      "value": "players-merged"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "4",
+      "rule-name": "rename-equipments-table", 
+      "rule-target": "table",
+      "object-locator": {
+        "schema-name": "gamedb",
+        "table-name": "equipments-S1toS5"
+      },
+      "rule-action": "rename",
+      "value": "equipments-merged"
+    }
+  ]
+}
